@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(rgb(0, 195, 255),rgb(115, 215, 255));
+    
+}
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rigth-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #b7eeff;
+    border-radius: 20px;
+    box-shadow: 5px 5px #566f7767;
+}
+
+.texto-entrada{
+    color: #ffffff;
+}
