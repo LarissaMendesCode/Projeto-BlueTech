@@ -39,6 +39,22 @@ body{
     box-shadow: 5px 5px #566f7767;
 }
 
+.textfiel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.textfiel > input{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    background: #c7f2ff;
+
+}
+
 .texto-entrada{
     color: #ffffff;
 }
