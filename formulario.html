@@ -21,7 +21,7 @@
             text-align: left;
         }
         .input-number {
-            width: 35px; /* Ajuste a largura conforme necessário */
+            width: 60px; /* Ajuste a largura conforme necessário */
             text-align: right;
         }
         .input-container {
@@ -98,9 +98,9 @@
                     </select></td>
                 </tr>
                 <tr>
-                    <td class="objetivo">Tempo de atenção sustentada(em minutos)</td>
+                    <td class="objetivo">Tempo de atenção sustentada(min:seg)</td>
                     <div class="input-container"> 
-                    <td><input class="input-number" type="number" name="number1" id="input2_1"><span>min</span>
+                    <td><input class="input-number" type="text" name="number1" id="input2_1" readonly>
                         <div class="cronometro">
                             <button type="button" onclick="startTimer('input2_1')">Iniciar</button>
                             <button type="button" onclick="stopTimer('input2_1')">Parar</button>
@@ -108,7 +108,7 @@
                     </div>
                     </td>
                     <div class="input-container">
-                    <td><input class="input-number" type="number" name="number2" id="input2_2"><span>min</span>
+                    <td><input class="input-number" type="text" name="number2" id="input2_2" readonly>
                         <div class="cronometro">
                             <button type="button" onclick="startTimer('input2_2')">Iniciar</button>
                             <button type="button" onclick="stopTimer('input2_2')">Parar</button>
@@ -116,7 +116,7 @@
                     </div>
                     </td>
                     <div class="input-container"> 
-                    <td><input class="input-number" type="number" name="number3" id="input2_3"><span>min</span>
+                    <td><input class="input-number" type="text" name="number3" id="input2_3" readonly>
                         <div class="cronometro">
                             <button type="button" onclick="startTimer('input2_3')">Iniciar</button>
                             <button type="button" onclick="stopTimer('input2_3')">Parar</button>
@@ -124,7 +124,7 @@
                     </div>
                     </td>
                     <div class="input-container">
-                    <td><input class="input-number" type="number" name="number4" id="input2_4"><span>min</span>
+                    <td><input class="input-number" type="text" name="number4" id="input2_4" readonly>
                         <div class="cronometro">
                             <button type="button" onclick="startTimer('input2_4')">Iniciar</button>
                             <button type="button" onclick="stopTimer('input2_4')">Parar</button>
@@ -132,7 +132,7 @@
                     </div>
                     </td>
                     <div class="input-container">
-                    <td><input class="input-number" type="number" name="number5" id="input2_5"><span>min</span>
+                    <td><input class="input-number" type="text" name="number5" id="input2_5" readonly>
                         <div class="cronometro">
                             <button type="button" onclick="startTimer('input2_5')">Iniciar</button>
                             <button type="button" onclick="stopTimer('input2_5')">Parar</button>
@@ -140,7 +140,7 @@
                     </div>
                     </td>
                     <div class="input-container">
-                    <td><input class="input-number" type="number" name="number6" id="input2_6"><span>min</span>
+                    <td><input class="input-number" type="text" name="number6" id="input2_6" readonly>
                         <div class="cronometro">
                             <button type="button" onclick="startTimer('input2_6')">Iniciar</button>
                             <button type="button" onclick="stopTimer('input2_6')">Parar</button>
@@ -148,7 +148,7 @@
                     </div>
                     </td>
                     <div class="input-container">
-                    <td><input class="input-number" type="number" name="number7" id="input2_7"><span>min</span>
+                    <td><input class="input-number" type="text" name="number7" id="input2_7" readonly>
                         <div class="cronometro">
                             <button type="button" onclick="startTimer('input2_7')">Iniciar</button>
                             <button type="button" onclick="stopTimer('input2_7')">Parar</button>
@@ -294,6 +294,13 @@
     <script>
         let timers = {};
 
+        function formatTime(seconds) {
+            const horas = Math.floor(seconds / 3600)
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${String(horas).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+        }
+
         function startTimer(inputId) {
             if (timers[inputId]) {
                 clearInterval(timers[inputId].interval);
@@ -304,8 +311,9 @@
             timers[inputId] = {
                 interval: setInterval(() => {
                     seconds++;
-                    input.value = (seconds / 60).toFixed(2); // Convertendo para minutos
-                }, 1000)
+                    input.value = formatTime(seconds);
+                }, 1000),
+                seconds: seconds
             };
         }
 
