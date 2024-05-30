@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registro Diário</title>
+
+    <h1>Clínica Pontinho Azul</h1>
+
+    <h2>Formulário Registro Diário</h2>
+  </head>
+
+  <style>
+table, th, td {
+
+  border: 1px solid black;
+  border collapse: collapse;
+}
+
+th, td{
+
+  padding: 5px;
+}
+
+th {
+  background-color: gray;
+  color: white;
+}
+
+table {
+  width: 100%;
+  margin:auto;
+}
+
+       
+  </style>
+  <body>
+    <form action ="https://sys4soft.com/udemy/forms/index.php" method="post"> 
+    <h3>Ficha do Paciente :</h3>
+    <div>
+      <select name = "campo seleção id= "" required>
+      <optgroup label = "Pacientes">
+      <option value=" "> </option> 
+      <option value=" João Cabral"> João Cabral</option>
+      <option value="  Pedro Albuquerque"> Pedro Albuquerque</option>
+      <option value="Carla Nunes"> Carla Nunes</option>
+      <option value=" Gael Lima"> Gael Lima</option>
+      <option value=" Jorge Almeida"> Jorge Almeida </option>
+      <option value=" Francisco Chagas"> Francisco Chagas</option>
+      <form action="/submit" method="post">
+      <input type = "submit" value = "Salvar">
+    </optgroup>
+    </select>
+    </div>
+    </form>
+
+    <br/>
+    <br/>
+    <table>
+    
+      <tr>
+        <td colspan= "8"> Acompanhamento Semanal</td> 
+     <tr>
+     
+        
+        <th> Programas </th>
+        <th><input type="date" name="date2_2"></th>
+        <th><input type="date" name="date2_3"></th>
+        <th> <input type="date" name="date2_4"></th>
+        <th> <input type="date" name="date2_5"></th>
+        <th><input type="date" name="date2_6"> </th>
+        <th> <input type="date" name="date2_7"></th>
+        <th> <input type="date" name="date2_8"></th>
+        </tr>
+     
+ <tr>   
+    <th> P.Contato Visual (diálogo) </th>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL  </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL  </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL  </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL  </td>
+</tr>
+<tr>   
+  <th> Ouvinte (Instruções de passo a passo) </th>
+  <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+  <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+  <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+  <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+  <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+  <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+  <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+
+  <tr>   
+    <th> Espera         </th>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+    <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+
+    <tr>   
+      <th> Percepção Visual </th>
+      <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+      <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+      <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+      <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+      <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+      <td><input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+      <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+
+      <tr>   
+        <th> Intraverbal  </th>
+        <td><input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+        <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+        <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+        <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+        <td><input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+        <td><input type="checkbox" name="campo_check" id="" value = "APL" check> APL</td>
+        <td><input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+
+        <tr>   
+          <th> Leitura </th>
+          <td> <input type="checkbox" name="campo_check" id="" value = "APL" check> APL </td>
+          <td> <input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+          <td><input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+          <td> <input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+          <td><input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl</td>
+          <td> <input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+          <td> <input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+
+          <tr>   
+            <th> Escrita </th>
+            <td><input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+            <td><input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+            <td> <input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+            <td> <input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+            <td> <input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+            <td> <input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl</td>
+            <td> <input type="checkbox" name="campo_check" id="" value = "Apl" check> Apl </td>
+
+            <tr>   
+              <th> Matemática </th>
+              <td> <input type="checkbox" name="campo_check" id=""> </td>
+              <td> <input type="checkbox" name="campo_check" id=""> </td>
+              <td> <input type="checkbox" name="campo_check" id=""> </td>
+              <td> <input type="checkbox" name="campo_check" id=""> </td>
+              <td> <input type="checkbox" name="campo_check" id=""> </td>
+              <td> <input type="checkbox" name="campo_check" id=""></td>
+              <td> <input type="checkbox" name="campo_check" id=""> </td>
+
+              <tr>   
+                <th> Estrutura Linguística </th>
+                <td> <input type="checkbox" name="campo_check" id=""> </td>
+                <td> <input type="checkbox" name="campo_check" id=""> </td>
+                <td><input type="checkbox" name="campo_check" id=""> </td>
+                <td> <input type="checkbox" name="campo_check" id=""> </td>
+                <td> <input type="checkbox" name="campo_check" id=""> </td>
+                <td> <input type="checkbox" name="campo_check" id=""> </td>
+                <td> <input type="checkbox" name="campo_check" id=""> </td>
+
+                <tr>   
+                  <th> Coordenação Motora Ampla </th>
+                  <td> <input type="checkbox" name="campo_check" id=""> </td>
+                  <td> <input type="checkbox" name="campo_check" id=""> </td>
+                  <td> <input type="checkbox" name="campo_check" id=""> </td>
+                  <td> <input type="checkbox" name="campo_check" id=""> </td>
+                  <td> <input type="checkbox" name="campo_check" id=""> </td>
+                  <td> <input type="checkbox" name="campo_check" id=""> </td>
+                  <td> <input type="checkbox" name="campo_check" id=""> </td>
+
+                         
+
+  </table>
+<!--para submeter as informações do formulário-->
+
+<form action ="https://sys4soft.com/udemy/forms/index.php" method="post"> 
+<div>
+<h3> Colaborador(a) deseja enviar as informações? </h3>
+<!--<input type = "text" name = "campo_texto " maxlength="20" required placeholder="Informe seu nome">-->
+<select name = "campo seleção id= "" required>
+  <optgroup label = "Atendente Terapêutica">
+<option value=" "></option>
+<option value=" Nicole Brandão"> Nicole Brandão</option>
+<option value=" Joana Pires"> Joana Pires</option>
+<option value="Paula Karla"> Paula Karla</option>
+<form action="/submit" method="post">
+<input type = "submit" value = "Enviar">
+</optgroup>
+</select>
+</div>
+</form>
+<!--<input type = "number" name = "campo_numero" min="0" max = "50" >-->
+
+    <nav>
+     <small><strong><a href="https://clinicapontinhoazul.com/"> Retornar Página Inicial</a></small></strong>
+     <a href="index.html">Home</a> 
+     <a href="page2.html">Home</a>
+     <a href="page3.html">Home</a>
+     <a href="page4.html">Home</a>
+     <a href="page5.html">Home</a>
+     <a href="page6.html">Home</a>
+    </nav>
+
+    <footer>
+     <hr/>
+     <hr/>
+    </footer>
+  </body>
+</html>
