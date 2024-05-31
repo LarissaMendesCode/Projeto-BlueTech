@@ -158,7 +158,7 @@ nav a:hover::after{
     position: relative;
 }
 
-.content::before{
+.content1::before{
     content: " ";
     position: absolute;
     background-color: var(--global-color-azul-escuro);
@@ -191,17 +191,35 @@ nav a:hover::after{
 }
 
 .first-content{
+    width: 85vw;
     display: flex;
 }
 
 .first-column{
+    height: 100%;
+    width: 30%;
+    background-color: var(--global-color-azul-escuro);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px 0 0 15px;
     text-align: center;
     flex: 1 0 auto;
     z-index: 10;
 }
 
 .second-column{
+    width: 70%;
     flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-entrar{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,11 +240,18 @@ nav a:hover::after{
     display: none;
 }
 
+.input{
+    width: 90%;
+    height: 35px;
+    margin: 5px;
+}
+
 .btn{
     border-radius: 15px;
     text-transform: uppercase;
     color: var(--global-color-azul-extra-claro);
     font-size: 10px;
+    margin: 5px;
     padding: 10px 50px;
     cursor: pointer;
     font-weight: bold;
@@ -240,4 +265,8 @@ nav a:hover::after{
 .btn-primary:hover{
     background-color: var(--global-color-azul-extra-claro);
     color: var(--global-color-azul-escuro);
+}
+
+.btn-entrar{
+    m
 }
