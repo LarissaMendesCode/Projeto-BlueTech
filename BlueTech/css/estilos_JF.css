@@ -220,6 +220,7 @@ nav a:hover::after{
 
 .form-entrar{
     width: 100%;
+    max-width: 32%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,5 +269,5 @@ nav a:hover::after{
 }
 
 .btn-entrar{
-    m
+    
 }
