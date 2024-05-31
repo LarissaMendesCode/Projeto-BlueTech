@@ -162,20 +162,23 @@ nav a:hover::after{
     content: " ";
     position: absolute;
     background-color: var(--global-color-azul-escuro);
-    width: 40%;
+    
+    width: 50%;
     height: 100%;
-
 }
 
 .title{
-    color: var(--global-color-azul-extra-claro);
     font-family: "Varela Round", sans-serif;
     font-size: 15pt;
     font-weight: bold;
     text-transform: capitalize;
 }
 
-.title-Color-azulbase{
+.title-primary{
+    color:var(--global-color-azul-extra-claro);
+}
+
+.title-second{
     color:var(--global-color-azul-escuro);
 }
 
@@ -184,6 +187,7 @@ nav a:hover::after{
     font-size: 14;
     font-weight: 300;
     line-height: 30px;
+    color: var(--global-color-azul-claro);
 }
 
 .first-content{
@@ -191,18 +195,21 @@ nav a:hover::after{
 }
 
 .first-column{
-    width: 40%;
     text-align: center;
-    flex: 1 0 initial;
+    flex: 1 0 auto;
     z-index: 10;
 }
 
 .second-column{
     flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .list-socialmidia{
     display: flex;
+    list-style-type: none;
 }
 
 .form-etrar-cadastrar{
@@ -222,6 +229,7 @@ nav a:hover::after{
     font-size: 10px;
     padding: 10px 50px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .btn-primary{
