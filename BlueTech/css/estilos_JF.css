@@ -5,6 +5,7 @@
 }
 
 :root{
+    --global-font-family-Varela-Round: "Varela Round", sans-serif;
     --global-color-azul-extra-claro:    hsl(189, 100%, 95%);
     --global-color-azul-claro:          rgb(30, 140, 255);
     --global-color-azul-escuro:         rgba(4, 19, 36, 0.95);
@@ -139,7 +140,7 @@ nav a:hover::after{
     background-image: linear-gradient(rgb(0, 0, 0, 0),rgb(125, 225, 255),rgba(0, 0, 0, 0));}
 
 .conteiner-card{
-    width: 100vw;
+    min-width: 100vw;
     height: 85vh;
     display: flex;
     justify-items: center;
@@ -148,7 +149,6 @@ nav a:hover::after{
 }
 .content{
     margin: auto;
-    width: 80%;
     height: 50%;
     background-color:var(--global-color-fundo);
     border-radius: 15px;    
@@ -172,6 +172,7 @@ nav a:hover::after{
     font-size: 15pt;
     font-weight: bold;
     text-transform: capitalize;
+    margin-bottom: 15px;
 }
 
 .title-primary{
@@ -186,20 +187,24 @@ nav a:hover::after{
     font-family: "Varela Round", sans-serif;
     font-size: 14;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 20px;
     color: var(--global-color-azul-claro);
+    text-align: center;
 }
 
 .first-content{
-    width: 85vw;
+    width: 640px;
+    max-width: 33%;
+    min-width: 490px;
     display: flex;
 }
 
 .first-column{
     height: 100%;
-    width: 30%;
+    width: 39%;
+    min-width: 39%;
     background-color: var(--global-color-azul-escuro);
-    padding: 5px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,16 +216,21 @@ nav a:hover::after{
 }
 
 .second-column{
+
     width: 70%;
+    max-width: 60%;
+    height: 80%;
     flex: 2 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .form-entrar{
     width: 100%;
-    max-width: 32%;
+    max-width: 275px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -250,17 +260,21 @@ nav a:hover::after{
 .btn{
     border-radius: 15px;
     text-transform: uppercase;
-    color: var(--global-color-azul-extra-claro);
-    font-size: 10px;
     margin: 5px;
-    padding: 10px 50px;
+    padding: 5px 10%;
     cursor: pointer;
+    font-family: var(--global-font-family-Varela-Round);
+    font-size: 12px;
+    font-weight: 400;    
     font-weight: bold;
 }
 
 .btn-primary{
+    color: var(--global-color-azul-extra-claro);
     background-color: transparent;
-    border: 3px solid --global-color-azul-extra-claro;
+    border-style: solid;
+    border-color:sol var(--global-color-azul-extra-claro);
+    transition: 1s;
 }
 
 .btn-primary:hover{
@@ -269,5 +283,14 @@ nav a:hover::after{
 }
 
 .btn-entrar{
-    
+    color: var(--global-color-azul-escuro);
+    background-color: transparent;
+    border-style: solid;
+    border-color:sol var(--global-color-azul-escuro);
+    transition: 1s;
+}
+
+.btn-entrar:hover{
+    background-color: var(--global-color-azul-escuro);
+    color: var(--global-color-azul-extra-claro);
 }
