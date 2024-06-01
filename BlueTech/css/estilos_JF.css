@@ -260,7 +260,7 @@ nav a:hover::after{
 .btn{
     border-radius: 15px;
     text-transform: uppercase;
-    margin: 5px;
+    margin: 10px;
     padding: 5px 10%;
     cursor: pointer;
     font-family: var(--global-font-family-Varela-Round);
