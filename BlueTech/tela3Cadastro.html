@@ -7,11 +7,14 @@
     <img src="FIGURA.png" alt="Figura pontinho azul" />
     <title>Cadastro - Clínica Pontinho Azul</title>
     <style>
+        
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
+            align-items: center;
+            box-sizing: border-box;
+            justify-content: center;
+            font-family: 'Arial','sans-serif', 'Inter';
             background-color: steelblue;
             color: white;
         }
@@ -27,6 +30,7 @@
         }
 
         .form-header {
+            margin-bottom: 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -34,24 +38,41 @@
 
         .form-header .title h1 {
             font-size: 24px;
-            color: steelblue;
+            color: #6c63ff;
         }
+        .form-header h1::after{
+            content: '';
+            display: block;
+            width: 5rem;
+            height: 0.3rem;
+            background-color: #6c63ff;
+            margin: 0 auto;
+            position: absolute;
+            border-radius: 10px;
 
-        .form-header .login-button button {
-            background-color: steelblue;
-            color: white;
+        }
+        .login-button button{
             border: none;
-            padding: 10px 20px;
+            background-color: #6c63ff;
+            padding: 0.4rem 1rem;
             border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-button button:hover{
+            background-color: #6b63fff1;
         }
 
-        .form-header .login-button button a {
+        .login-button button a {
             color: white;
             text-decoration: none;
+            font-weight: 500;
         }
 
         .input-group {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1rem 0;
             flex-direction: column;
             gap: 10px;
         }
@@ -59,39 +80,72 @@
         .input-box {
             display: flex;
             flex-direction: column;
+            margin-bottom: 1.1rem;
         }
 
         .input-box label {
             margin-bottom: 5px;
             font-weight: bold;
         }
-
+        .input-box input:focus-visible{
+            outline: 1px solid #6c63ff;
+        }
+        .input-box label,.gender{
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6c63ff;
+        }
+        .input-box input::placeholder{
+            color: #000000be;
+        }
+        .input-box input:hover{
+            background-color: #eeeeee75;
+        }
         .input-box input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            margin: 0.6rem 0;
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 1px 1px 6px #0000001c;
         }
 
-        .gender-inputs {
+        .gender-input {
             margin: 20px 0;
+            align-items: center;
         }
 
         .gender-title h6 {
-            margin-bottom: 10px;
+            margin-bottom: 0.5px;
+            align-items: center;
+        }
+        .gender-input label{
+            font-size: 0.81rem;
+            font-weight: 600;
+        }
+        .gender-input input{
+            margin-right: 0.35rem;
         }
 
         .gender-group {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            margin-top: 0.62rem;
+            padding: 0 0.5rem;
         }
 
         .continue-button button {
             background-color: steelblue;
             color: white;
             border: none;
-            padding: 10px 20px;
+            width: 100%;
+            padding: 0.62rem;
+            margin-top: 2.5rem;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-decoration: none;
+            font-size: 0.93rem;
+            font-weight: 500;
         }
 
         .continue-button button:hover {
@@ -152,17 +206,17 @@
                         <input id="Confirmpassword" type="password" name="Confirmpassword" placeholder="Digite sua senha novamente" required>
                     </div>
                 </div>
-                <div class="gender-inputs">
+                <div class="gender-inputs ">
                     <div class="gender-title">
                         <h6>Gênero</h6>
                     </div>
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input type="radio" id="female" name="gender" value="female">
+                            <input type="radio" id="female" name="gender">
                             <label for="female">Feminino</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="male" name="gender" value="male">
+                            <input type="radio" id="male" name="gender">
                             <label for="male">Masculino</label>
                         </div>
                     </div>
