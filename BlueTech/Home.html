@@ -1,51 +1,137 @@
 <!DOCTYPE html>
 <html lang="pr-bt" class="html-home">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Pontinho Azul</title>
-    
-    <link rel="stylesheet" href="css/estilos_JF.css">
-    <link rel="shortcut icon" type="imagex/png" href="Imagens/ícone.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos_JF.css" />
+    <link rel="shortcut icon" type="imagex/png" href="Imagens/ícone.png" />
 
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .inicio {
+        color: navy;
+        font-size: 50px;
+        font-family: cursive;
+      }
+
+      .título {
+        color: navy;
+        font-size: 20px;
+        text-align: center;
+        font-family: cursive;
+      }
+      .subtítulo {
+        color: navy;
+        font-size: 15px;
+        text-align: center;
+        font-family: cursive;
+      }
+
+      .rodape {
+        color: navy;
+        font-size: 15px;
+        text-align: center;
+        font-family: cursive;
+      }
+
+      .fim {
+        margin: 20 px;
+        padding: 40 px;
+        color: navy;
+        font-size: 30px;
+        text-align: center;
+        font-family: cursive;
+        font-size: 18px;
+      }
+
+      #imagemrodapé {
+        width: 100%;
+      }
+    </style>
+
+    <title class="inicio">Clínica Pontinho Azul</title>
+  </head>
+  <body>
     <header id="header-home" class="header">
-        <div class="conteiner">
-            <div class="flex">
+      <div class="conteiner">
+        <div class="flex">
+          <a class="link-logo" chref="#">
+            <img
+              class="imd_logo"
+              src="Imagens/Pontinho-Azul-11-3_01.png"
+              alt="Logo pontinho azul"
+            />
+          </a>
 
-                <a class="link-logo" chref="#"> 
-                    <img class="imd_logo" src="Imagens/Pontinho-Azul-11-3_01.png" alt="Logo pontinho azul">
-                </a>
+          <nav>
+            <ul>
+              <li><a href="tela5Registros.html">FORMULÁRIOS</a></li>
 
-                <nav>
-                    <ul>
-                        <li><a href="#">SERVIÇOS</a></li>
-                        <li><a href="#">CONTATO</a></li>
-                        <li><a href="#">SOBRE</a></li>
-                    </ul>
-                </nav>
+              <li><a href="tela3Cadastro.html">CADASTRO</a></li>
 
-                <div class="btm-login">
-                    <a href="Login.html"><button>LOGIN</button></a>
-                </div>
-                
-            </div>
+              <li><a href="tela1Home.html">CONTATOS</a></li>
+            </ul>
+          </nav>
+
+          <div class="btm-login">
+            <a href="Login.html"><button>LOGIN</button></a>
+          </div>
         </div>
+      </div>
     </header>
     <main id="home-main">
-        <h1>Sejam bem vindo</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eos aperiam quidem distinctio illo totam provident unde voluptates nam ut nisi ullam adipisci assumenda id sint cumque repudiandae, aliquid sit!</p>
-    </main>
-    <footer>
+      <br />
+      <br />
+      <h1 class="fim">Clínica Pontinho Azul</h1>
+      <br />
 
-    </footer>
-    
+      <p class="título">
+        Seja bem-vindo à Clínica Pontinho Azul! A nossa proposta é oferecer ao
+        seu filho uma oportunidade de se desenvolver com uma equipe
+        interdisciplinar, tratamento individualizado e práticas baseadas em
+        Análise do Comportamento (ABA). Além disso, oferecemos cursos,
+        treinamentos e formações com professores de excelência. Fale conosco no
+        botão de WhatsApp, será um prazer te atender.
+      </p>
+      <br />
+      <br />
+      <ul class="subtítulo">
+        <li>Terapias</li>
+        <li>Cursos</li>
+        <li>Psicologia</li>
+        <li>Terapia Ocupacional</li>
+        <li>Fonoaudiologia</li>
+        <li>Psicopedagogia</li>
+        <li>Musicoterapia</li>
+      </ul>
+    </main>
     <script src="JS/menu.js"></script>
-</body>
+  </body>
+
+  <footer>
+    <hr />
+    <p class="rodape"></p>
+    <p class="rodape"></p>
+
+    <hr />
+
+    <a href="rodapé.jpg">
+      <img
+        id="imagemrodapé"
+        src="rodapé.jpg"
+        alt="logo da empresa"
+        title=" Clinica Pontinho Azul"
+      />
+    </a>
+
+    <p class="fim">
+      Pontinho Azul &copy; 2030| &reg; Todos os direitos reservados.
+    </p>
+  </footer>
 </html>
