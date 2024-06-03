@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário em Formato de Planilha</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .input-number {
+            width: 100%;
+            text-align: right;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .input-container button {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Ficha do Paciente</h1>
+        <div class="text-center mb-4">
+            <input type="text" class="form-control w-50 mx-auto" name="Nome do Paciente" placeholder="Nome do Paciente">
+        </div>
+        <form action="/submit" method="post">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Objetivos</th>
+                            <th><input type="date" class="form-control" name="data2_1"></th>
+                            <th><input type="date" class="form-control" name="data2_2"></th>
+                            <th><input type="date" class="form-control" name="data2_3"></th>
+                            <th><input type="date" class="form-control" name="data2_4"></th>
+                            <th><input type="date" class="form-control" name="data2_5"></th>
+                            <th><input type="date" class="form-control" name="data2_6"></th>
+                            <th><input type="date" class="form-control" name="data2_7"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="objetivo">Memorização do que foi realizado no dia anterior</td>
+                            <td><select class="form-control" name="resposta1_1">
+                                <option value="opcao1">Não Respondeu</option>
+                                <option value="opcao2">Total</option>
+                                <option value="opcao3">Parcial</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta1_2">
+                                <option value="opcao1">Não Respondeu</option>
+                                <option value="opcao2">Total</option>
+                                <option value="opcao3">Parcial</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta1_3">
+                                <option value="opcao1">Não Respondeu</option>
+                                <option value="opcao2">Total</option>
+                                <option value="opcao3">Parcial</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta1_4">
+                                <option value="opcao1">Não Respondeu</option>
+                                <option value="opcao2">Total</option>
+                                <option value="opcao3">Parcial</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta1_5">
+                                <option value="opcao1">Não Respondeu</option>
+                                <option value="opcao2">Total</option>
+                                <option value="opcao3">Parcial</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta1_6">
+                                <option value="opcao1">Não Respondeu</option>
+                                <option value="opcao2">Total</option>
+                                <option value="opcao3">Parcial</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta1_7">
+                                <option value="opcao1">Não Respondeu</option>
+                                <option value="opcao2">Total</option>
+                                <option value="opcao3">Parcial</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="objetivo">Tempo de atenção sustentada (min:seg)</td>
+                            <td class="input-container">
+                                <input class="input-number form-control" type="text" name="number1" id="input2_1" readonly>
+                                <button type="button" class="btn btn-success btn-sm" onclick="startTimer('input2_1')">Iniciar</button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="stopTimer('input2_1')">Parar</button>
+                            </td>
+                            <td class="input-container">
+                                <input class="input-number form-control" type="text" name="number2" id="input2_2" readonly>
+                                <button type="button" class="btn btn-success btn-sm" onclick="startTimer('input2_2')">Iniciar</button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="stopTimer('input2_2')">Parar</button>
+                            </td>
+                            <td class="input-container">
+                                <input class="input-number form-control" type="text" name="number3" id="input2_3" readonly>
+                                <button type="button" class="btn btn-success btn-sm" onclick="startTimer('input2_3')">Iniciar</button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="stopTimer('input2_3')">Parar</button>
+                            </td>
+                            <td class="input-container">
+                                <input class="input-number form-control" type="text" name="number4" id="input2_4" readonly>
+                                <button type="button" class="btn btn-success btn-sm" onclick="startTimer('input2_4')">Iniciar</button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="stopTimer('input2_4')">Parar</button>
+                            </td>
+                            <td class="input-container">
+                                <input class="input-number form-control" type="text" name="number5" id="input2_5" readonly>
+                                <button type="button" class="btn btn-success btn-sm" onclick="startTimer('input2_5')">Iniciar</button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="stopTimer('input2_5')">Parar</button>
+                            </td>
+                            <td class="input-container">
+                                <input class="input-number form-control" type="text" name="number6" id="input2_6" readonly>
+                                <button type="button" class="btn btn-success btn-sm" onclick="startTimer('input2_6')">Iniciar</button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="stopTimer('input2_6')">Parar</button>
+                            </td>
+                            <td class="input-container">
+                                <input class="input-number form-control" type="text" name="number7" id="input2_7" readonly>
+                                <button type="button" class="btn btn-success btn-sm" onclick="startTimer('input2_7')">Iniciar</button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="stopTimer('input2_7')">Parar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="objetivo">Necessidade de Movimento</td>
+                            <td><select class="form-control" name="resposta3_1">
+                                <option value="opcao1">Baixo</option>
+                                <option value="opcao2">Média</option>
+                                <option value="opcao3">Alta</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta3_2">
+                                <option value="opcao1">Baixo</option>
+                                <option value="opcao2">Média</option>
+                                <option value="opcao3">Alta</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta3_3">
+                                <option value="opcao1">Baixo</option>
+                                <option value="opcao2">Média</option>
+                                <option value="opcao3">Alta</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta3_4">
+                                <option value="opcao1">Baixo</option>
+                                <option value="opcao2">Média</option>
+                                <option value="opcao3">Alta</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta3_5">
+                                <option value="opcao1">Baixo</option>
+                                <option value="opcao2">Média</option>
+                                <option value="opcao3">Alta</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta3_6">
+                                <option value="opcao1">Baixo</option>
+                                <option value="opcao2">Média</option>
+                                <option value="opcao3">Alta</option>
+                            </select></td>
+                            <td><select class="form-control" name="resposta3_7">
+                                <option value="opcao1">Baixo</option>
+                                <option value="opcao2">Média</option>
+                                <option value="opcao3">Alta</option>
+                            </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center">
+                <input type="submit" class="btn btn-primary" value="Enviar">
+            </div>
+        </form>
+    </div>
+    <script>
+        var timers = {};
+
+        function startTimer(id) {
+            if (!timers[id]) {
+                timers[id] = { start: Date.now(), interval: null };
+            }
+            timers[id].interval = setInterval(function() {
+                var elapsed = Date.now() - timers[id].start;
+                var minutes = Math.floor(elapsed / 60000);
+                var seconds = Math.floor((elapsed % 60000) / 1000);
+                document.getElementById(id).value = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+            }, 1000);
+        }
+
+        function stopTimer(id) {
+            clearInterval(timers[id].interval);
+        }
+    </script>
+</body>
+</html>

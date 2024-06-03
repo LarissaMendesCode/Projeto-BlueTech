@@ -1,0 +1,22 @@
+{
+  "name": "projeto-bluetech",
+  "version": "1.0.0",
+  "description": "Projeto BlueTech para gerenciar consultas usando Node.js e MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Jose Matheus",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^6.7.0",
+    "mongoose": "^6.12.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LarissaMendesCode/Projeto-BlueTech"
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Clínica Pontinho Azul</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            background-color: steelblue;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .formLogin {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .formLogin input[type="email"],
+        .formLogin input[type="password"] {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: steelblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: darkblue;
+        }
+
+        a {
+            color: steelblue;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <form method="POST" class="formLogin col-md-4 mx-auto">
+                <h1 class="mb-4">Login</h1>
+                <p>Digite os seus dados de acesso no campo abaixo.</p>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" autofocus required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
+                </div>
+                <div class="form-group">
+                    <a href="/">Esqueci minha senha</a><br>
+                    <a href="tela3Cadastro.html">Cadastrar</a>
+                </div>
+                <input type="submit" value="Acessar" class="btn btn-block">
+                <br>
+                <a href="tela1Home.html" class="d-block mt-3">Voltar</a>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.querySelector('.formLogin');
+            
+            if (loginForm) {
+                loginForm.addEventListener('submit', async (event) => {
+                    event.preventDefault();
+                    const email = loginForm.querySelector('#email').value;
+                    const password = loginForm.querySelector('#password').value;
+                    try {
+                        const response = await axios.post('/api/users/login', { email, password });
+                        // Redirecionar ou manipular resposta
+                    } catch (error) {
+                        console.error(error);
+                        alert('Login falhou!');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
