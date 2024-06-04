@@ -15,6 +15,8 @@
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
         .formLogin {
@@ -65,17 +67,17 @@
 
 <body>
     <div class="page">
-        <div class="container">
+        <main class="container">
             <form method="POST" class="formLogin col-md-4 mx-auto">
                 <h1 class="mb-4">Login</h1>
                 <p>Digite os seus dados de acesso no campo abaixo.</p>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" autofocus required>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" aria-label="Email" autofocus required>
                 </div>
                 <div class="form-group">
                     <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" aria-label="Senha" required>
                 </div>
                 <div class="form-group">
                     <a href="/">Esqueci minha senha</a><br>
@@ -85,7 +87,7 @@
                 <br>
                 <a href="tela1Home.html" class="d-block mt-3">Voltar</a>
             </form>
-        </div>
+        </main>
     </div>
     
     <!-- Bootstrap JS and dependencies -->
@@ -104,7 +106,8 @@
                     const password = loginForm.querySelector('#password').value;
                     try {
                         const response = await axios.post('/api/users/login', { email, password });
-                        // Redirecionar ou manipular resposta
+                        // Handle response (e.g., redirect to a new page)
+                        alert('Login successful!'); // Placeholder alert for success
                     } catch (error) {
                         console.error(error);
                         alert('Login falhou!');
@@ -114,4 +117,5 @@
         });
     </script>
 </body>
+
 </html>

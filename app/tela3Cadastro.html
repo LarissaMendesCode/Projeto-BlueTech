@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="css/estilos_JF.css" />
     <title>Cadastro - Clínica Pontinho Azul</title>
     <style>
@@ -276,11 +276,50 @@
               </div>
             </div>
           </div>
-          <div class="continue-button">
-            <button type="submit">Continuar</button>
-          </div>
-        </form>
-      </div>
+          <form action="#">
+            <div class="continue-button">
+              <button type="button" onclick=>Continuar</button>
+            </div>
+          </form>
+          </form>
+        </div>
     </div>
   </body>
+  <script>
+    
+    axios.get('http://localhost:3000/cadastro')
+        .then(function (response){
+         document.getElementById('exibir').innerHTML = response.data.map(function (aluno){
+            return (
+                '<tr>' +
+                    '<td> <a class="btn btn-outline-info btn-sm" href="#" role="button" onclick="javascript:return editarAluno(`'+cadastro._id+'`);">Editar</a> </td>' +
+                    '<th scope="row">'+ aluno._id +'</th>' +
+                    '<td>'+ aluno.matricula +'</td>' +
+                    '<td>'+ aluno.nome +'</td>' +
+                    '<td>'+ aluno.disciplina +'</td>' +
+                    '<td> <a class="btn btn-outline-danger btn-sm" href="#" role="button" onclick="javascript:return excluirAluno(`'+cadastro._id+'`);">Excluir</a> </td>' +
+                '</tr>'
+            );
+         }).join('');   
+        })
+        .catch(function (err){
+            document.getElementById('output').innerHTML = '<div class="alert alert-danger" role="alert">'+ err.message +'</div>';
+        });
+
+    function excluirAluno(id) {
+        axios.delete('http://localhost:3000/cadastro/'+ id +'')
+        .then(function(response){
+            location.reload();
+        })
+        .catch(function (err){
+            document.getElementById("output").innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>'+ err.message +'</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+        });
+    }
+
+    function editarAluno(id) {
+        window.location.href = 'form.html?id='+ id +'';
+    }
+        
+</script>
+
 </html>
