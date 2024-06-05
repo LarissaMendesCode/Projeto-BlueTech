@@ -36,7 +36,7 @@ router.get('/dog', async function(req, res, next) {
   }
 }) 
 
-/* GET aluno */
+/* GET cadastro */
 router.get('/Logins/id', async function(req, res, next) {
     try{
       const db = await connect();
@@ -51,7 +51,7 @@ router.get('/Logins/id', async function(req, res, next) {
     }
 })
 
-// POST /aluno
+// POST /cadastro
 router.post('/Logins', async function(req, res, next){
     try{
       const Logins = req.body;
@@ -64,7 +64,7 @@ router.post('/Logins', async function(req, res, next){
     }
 })
 
-// PUT /aluno/{id}
+// PUT /cadastro/{id}
 router.put('/Logins/:id', async function(req, res, next){
     try{
       const Logins = req.body;
@@ -77,7 +77,7 @@ router.put('/Logins/:id', async function(req, res, next){
     }
 })
 
-// DELETE /aluno/{id}
+// DELETE /cadastro/{id}
 router.delete('/Logins/:id', async function(req, res, next){
     try{
       const db = await connect();
