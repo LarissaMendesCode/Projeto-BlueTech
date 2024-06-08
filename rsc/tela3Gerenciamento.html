@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/estilos_JF.css" />
+    <title>Cadastro - Clínica Pontinho Azul</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: center;
+        font-family: "Arial", "sans-serif", "Inter";
+        background-color: steelblue;
+        color: white;
+      }
+
+      .container {
+        margin: 20px auto;
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        color: steelblue;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-header {
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .form-header .title h1 {
+        font-size: 24px;
+        color: #6c63ff;
+      }
+      .form-header h1::after {
+        content: "";
+        display: block;
+        width: 5rem;
+        height: 0.3rem;
+        background-color: #6c63ff;
+        margin: 0 auto;
+        position: absolute;
+        border-radius: 10px;
+      }
+      .login-button button {
+        border: none;
+        background-color: #6c63ff;
+        padding: 0.4rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .login-button button:hover {
+        background-color: #6b63fff1;
+      }
+
+      .login-button button a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .input-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem 0;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .input-box {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.1rem;
+      }
+
+      .input-box label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .input-box input:focus-visible {
+        outline: 1px solid #6c63ff;
+      }
+      .input-box label,
+      .gender {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #6c63ff;
+      }
+      .input-box input::placeholder {
+        color: #000000be;
+      }
+      .input-box input:hover {
+        background-color: #eeeeee75;
+      }
+      .input-box input {
+        margin: 0.6rem 0;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+      }
+
+      .gender-input {
+        margin: 20px 0;
+        align-items: center;
+      }
+
+      .gender-title h6 {
+        margin-bottom: 0.5px;
+        align-items: center;
+      }
+      .gender-input label {
+        font-size: 0.81rem;
+        font-weight: 600;
+      }
+      .gender-input input {
+        margin-right: 0.35rem;
+      }
+
+      .gender-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.62rem;
+        padding: 0 0.5rem;
+      }
+
+      .continue-button button {
+        background-color: steelblue;
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 0.62rem;
+        margin-top: 2.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 0.93rem;
+        font-weight: 500;
+      }
+
+      .continue-button button:hover {
+        background-color: #4682b4;
+      }
+
+      .form-image img {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      header img {
+        max-width: 200px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header-login" class="header">
+      <div class="conteiner">
+        <div class="flex">
+          <a id="link-logo" href="Home.html">
+            <img
+              class="imd_logo"
+              src="Imagens/Pontinho-Azul-11-3_01.png"
+              alt="Logo pontinho azul"
+            />
+          </a>
+          <div id="nav-menu-navegacao">
+            <nav>
+              <ul id="nav">
+                <li><a href="Home.html">Página Inicial</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="btm-login-no"></div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="form-image"></div>
+      <div class="form">
+        <form action="#">
+          <div class="form-header">
+            <div class="title">
+              <h1>Cadastre-se</h1>
+            </div>
+            <div class="login-button">
+              <button><a href="#">Pesquisar</a></button>
+              <button><a href="#">Editar</a></button>
+              <button><a href="#">Salvar</a></button>
+              <button><a href="#">Excluir</a></button>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input-box">
+              <label for="firstname">Primeiro Nome</label>
+              <input
+                id="firstname"
+                type="text"
+                name="firstname"
+                placeholder="Digite seu primeiro nome"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="lastname">Sobrenome</label>
+              <input
+                id="lastname"
+                type="text"
+                name="lastname"
+                placeholder="Digite seu sobrenome"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Digite seu email"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="number">Celular</label>
+              <input
+                id="number"
+                type="tel"
+                name="number"
+                placeholder="(xx) xxxxx-xxxx"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="password">Senha</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Digite sua senha"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="Confirmpassword">Confirme sua Senha</label>
+              <input
+                id="Confirmpassword"
+                type="password"
+                name="Confirmpassword"
+                placeholder="Digite sua senha novamente"
+                required
+              />
+            </div>
+          </div>
+          <div class="gender-inputs">
+            <div class="gender-title">
+              <h6>Gênero</h6>
+            </div>
+            <div class="gender-group">
+              <div class="gender-input">
+                <input type="radio" id="female" name="gender" />
+                <label for="female">Feminino</label>
+              </div>
+              <div class="gender-input">
+                <input type="radio" id="male" name="gender" />
+                <label for="male">Masculino</label>
+              </div>
+            </div>
+          </div>
+          <div class="continue-button">
+            <button type="submit">Continuar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
