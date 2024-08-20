@@ -51,6 +51,6 @@ app.delete("/:id", async (req, res) => {
 })
 
 app.listen(port, () => {
-  mongoose.connect("mongodb+srv://venanciodarko:g$$w7E%40R2*npTBu@bluecluster.cqilhqq.mongodb.net");
+  mongoose.connect();
   console.log(`API funcionando na porta ${port}!`);
 })
